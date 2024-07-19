@@ -10,7 +10,7 @@
 
 Diseño web básico de un portafolio de trabajo para una desarrolladora Front-End.
 
-> Este trabajo fue elaborado como parte del curso *NOMBRE* de Oracle Next Education (ONE).
+> Este trabajo fue elaborado como parte del curso *HTML y CSS* de Oracle Next Education (ONE).
 
 ## :dart: Características
 - Pestañas "Inicio", "Sobre mí" y "Proyectos"
@@ -18,7 +18,7 @@ Diseño web básico de un portafolio de trabajo para una desarrolladora Front-En
 - Galería de proyectos con botones de enlace al código y página de demostración para cada uno
 
 ## :key: Acceso
-Enlace de demostración: <https://github.com>
+Enlace de demostración: <>
 
 ## :wave: Sobre mí
 ¡Hola! Me llamo Eugenia. Soy una entusiasta del aprendizaje con gusto en la ciencia, matemáticas y tecnología.
