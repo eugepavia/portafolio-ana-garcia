@@ -4,7 +4,7 @@
     --color_primario: #000000;
     --color_secundario: #F6F6F6;
     --color_terciario: #22D4FD;
-    --color_footer: #272727;
+    --color_hover: #272727;
     --fuente_titulo: "Krona One", sans-serif;
     --fuente_contenido: "Montserrat", sans-serif;
 }
@@ -16,12 +16,11 @@
     margin: 0;
 }
 
-
-
 body {
     box-sizing: border-box;
     background-color: var(--color_primario);
     color: var(--color_secundario);
+    height: 100vh; /*@revisar fullscreen */
 }
 
 .destacado {
@@ -29,58 +28,89 @@ body {
 }
 
 
+
+/* @nota Header */
+
 .header {
-    padding: 2% 0% 0% 15%;
+    box-sizing: border-box;
+    background-color: var(--color_terciario);
+    color: var(--color_primario);
+    
+    padding: 0% 0% 0% 15%;
 
 }
 
 .header_menu {
+    box-sizing: border-box;
     display: flex;
-    gap: 80px;
+    gap: 2vw;
 }
 
 .header_menu_enlace {
     font-size: 1.5rem;
     font-family: var(--fuente_contenido);
     font-weight: 600;
-    color: var(--color_terciario);
+    color: var(--color_primario);
 
     text-decoration: none;
+
+    padding: 2vh 2vw;
 }
 
+.header_menu_enlace:hover {
+    background-color: var(--color_hover);
+    color: var(--color_terciario);
+}
+
+/* @nota Main */
 
 .presentacion {
-    padding: 10% 15%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 82px;
-}
+    box-sizing: border-box;
+   
+    margin: 3% 5%;
 
-.presentacion_contenido {
-    width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    margin:0 92px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5vw;
 }
 
 .presentacion_titulo {
     font-size: 2.25rem;
     font-family: var(--fuente_titulo);
-       
+}
+
+.presentacion_subtitulo {
+    font-size: 1.5rem;
+    font-family: var(--fuente_titulo);
+}
+
+.presentacion_contenido {
+    display: flex;
+    align-items: center;
+    gap: 2.5vh;
+}
+
+.presentacion_info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    margin:0 5vw;
 }
 
 .presentacion_parrafo {
     font-size: 1.5rem;
     font-family: var(--fuente_contenido);
+    text-align: justify;
 }
 
 .presentacion_botones {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 2vh;
 }
 
 .presentacion_botones_titulo {
@@ -100,7 +130,7 @@ body {
     font-family: var(--fuente_contenido);
     font-weight: 600;
 
-    width: 50%;
+    width: 75%;
     height: 79px;
     padding: 21.5px 0;
     border-radius: 8px;
@@ -114,19 +144,96 @@ body {
 }
 
 .presentacion_botones_enlaces:hover {
-    background-color: var(--color_footer);
+    background-color: var(--color_hover);
 }
 
 .presentacion_imagen {
     width: 50%;
+    height: 50%;
 }
+
+
+
+.proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.proyectos_cajas {
+    box-sizing: border-box;
+
+    width: 20%;
+    padding: 1rem;
+    min-height: 32rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #22D4FD;
+    border-radius: 16px;
+    gap: 1.5rem;   
+}
+
+.proyectos_contenido {
+    display: flex;
+    flex-direction: column;;
+    gap: 1.2rem;
+}
+
+.proyectos_imagen {
+    width: 100%;
+}
+
+.proyectos_descripcion {
+    font-size: 1rem;
+    font-family: var(--fuente_contenido);
+    text-align: justify;
+}
+
+.proyectos_botones {
+    display: flex;
+    align-items: center;
+    gap: 3vh;
+}
+
+.proyectos_botones_enlaces {
+    box-sizing: content-box;
+
+    background-color: var(--color_terciario);
+    color: var(--color_primario);
+
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--fuente_contenido);
+    font-weight: 600;
+
+    width: 75%;
+    height: 20px;
+    padding: 5px 0px;
+    border-radius: 8px;
+    border: 2px solid var(--color_terciario);
+
+    text-decoration: none;
+}
+
+.proyectos_botones_enlaces:hover {
+    background-color: var(--color_hover);
+    color: var(--color_terciario);
+}
+
+
+
+/* @nota Footer */
 
 .footer {
     box-sizing: border-box;
     background-color: var(--color_terciario);
     color: var(--color_primario);
 
-    padding: 24px;
+    padding: 2vh;
 
     text-align: center;
 
@@ -135,24 +242,69 @@ body {
     font-weight: 400;
 }
 
+/* @nota Responsivo */
 
 
+@media (max-width: 1372px) {
+    .proyectos_botones_enlaces {
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
 
-@media (max-width: 1200px) {
+    .proyectos_cajas {
+        min-height: 38rem;
+    }
+
+}
+
+
+/* celulares y pequeños @revisar */
+@media (max-width: 1048px) {
     .header {
-        padding: 10%;
+        padding: 0%;
     }
     .header_menu {
         justify-content: center;
     }
     
-    .presentacion {
+    .presentacion_contenido {
         flex-direction: column-reverse;
         padding: 5%;
     }
 
-    .presentacion_contenido {
+    .presentacion_info {
         width: auto;
     }
-}
 
+    .proyectos {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .proyectos_cajas { 
+        width: 80%;
+        min-height: auto;
+    }
+
+    .proyectos_contenido {
+        align-items: center;
+    }
+
+    .proyectos_imagen {
+        width: 75%;
+    }
+
+    .proyectos_botones {
+        justify-content: center;
+    }
+
+    .proyectos_botones_enlaces {
+        box-sizing: content-box;
+        justify-content: center; 
+        width: 30%;
+        height: 25px;
+    }
+
+}
